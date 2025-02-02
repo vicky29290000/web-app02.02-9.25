@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConstructPro - Advanced Project Management System</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div id="app">
+        <aside id="sidebar" class="sidebar">
+            <div class="sidebar-header">
+                <h1>ConstructPro</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#dashboard" class="active">Dashboard</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#tasks">Tasks</a></li>
+                    <li><a href="#team">Team</a></li>
+                    <li><a href="#reports">Reports</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <main id="main-content">
+            <header>
+                <div id="search-bar">
+                    <input type="text" placeholder="Search...">
+                </div>
+                <div id="user-menu">
+                    <img id="user-photo" src="/placeholder.svg?height=40&width=40" alt="User photo">
+                    <span id="user-name">John Doe</span>
+                </div>
+            </header>
+
+            <div id="dashboard" class="content active">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Active Projects</h3>
+                        <p class="big-number">12</p>
+                    </div>
+                    <div class="card">
+                        <h3>Pending Tasks</h3>
+                        <p class="big-number">47</p>
+                    </div>
+                    <div class="card">
+                        <h3>Team Members</h3>
+                        <p class="big-number">28</p>
+                    </div>
+                    <div class="card">
+                        <h3>Budget Overview</h3>
+                        <canvas id="budget-chart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <div id="projects" class="content">
+                <h2>Projects</h2>
+                <table class="project-table">
+                    <thead>
+                        <tr>
+                            <th>Project Name</th>
+                            <th>Status</th>
+                            <th>Progress</th>
+                            <th>Due Date</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>City Center Skyscraper</td>
+                            <td><span class="status in-progress">In Progress</span></td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%;"></div>
+                                </div>
+                            </td>
+                            <td>2025-12-31</td>
+                        </tr>
+                        <tr>
+                            <td>Riverside Apartments</td>
+                            <td><span class="status planning">Planning</span></td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 20%;"></div>
+                                </div>
+                            </td>
+                            <td>2026-06-30</td>
+                        </tr>
+                        <tr>
+                            <td>Downtown Mall Renovation</td>
+                            <td><span class="status completed">Completed</span></td>
+                            <td>
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 100%;"></div>
+                                </div>
+                            </td>
+                            <td>2025-03-15</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="tasks" class="content">
+                <h2>Tasks</h2>
+                <!-- Task content here -->
+            </div>
+
+            <div id="team" class="content">
+                <h2>Team</h2>
+                <!-- Team content here -->
+            </div>
+
+            <div id="reports" class="content">
+                <h2>Reports</h2>
+                <!-- Reports content here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
